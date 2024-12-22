@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to Speckle Poultry Farm, where quality meets care.">
+    <meta name="keywords" content="Poultry, Farm, Quality, Care">
+    <title>Speckle Poultry Farm - Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+       
+        body {
+    font-family: Arial, sans-serif;
+    color: white;
+    overflow-x: hidden;
+    background: url('https://i.pinimg.com/originals/10/9c/e1/109ce1cf1cec6c5acb5d651a0f6d846b.jpg') no-repeat center center/cover;
+}
+
+        .menu-bar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            z-index: 10;
+            transition: transform 0.5s ease;
+        }
+        .menu-bar a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            margin: 0 20px;
+            position: relative;
+        }
+        .menu-bar a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            height: 3px;
+            width: 0%;
+            background-color: #ff4747;
+            transition: width 0.3s ease;
+        }
+        .menu-bar a:hover::after {
+            width: 100%;
+        }
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .content {
+            text-align: center;
+            max-width: 60%;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            transform: scale(0.8);
+            animation: contentLoad 1.5s ease forwards;
+        }
+        @keyframes contentLoad {
+            to {
+                transform: scale(1);
+            }
+        }
+        .content h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            color: #ffe4e1;
+        }
+        .content p {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: #f8f8ff;
+        }
+        .explore-btn {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .explore-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+        }
+        .rotating-circle {
+            position: absolute;
+            bottom: 50px;
+            right: 50px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid white;
+            animation: rotate 4s linear infinite;
+        }
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        /* Mouse Animation */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            filter: blur(50px);
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            animation: mouseMove 5s infinite alternate;
+        }
+        @keyframes mouseMove {
+            from {
+                transform: translate(-40%, -40%);
+            }
+            to {
+                transform: translate(-60%, -60%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="menu-bar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    
+    <main class="hero">
+        <div class="content">
+            <h1>Welcome to Speckle Poultry Farm</h1>
+            <p>Where Quality Meets Care</p>
+            <button class="explore-btn" aria-label="Explore our services">Explore</button>
+        </div>
+        <div class="rotating-circle">
+            <iframe 
+                src="https://www.youtube.com/embed/sfGKRwHowuk" 
+                title="MID NIGHT PRAYER COMMANDING THE DAY-NIGHT OF DIVINE SETTLEMENT. 10-11-2024"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+            </iframe>
+        </div>
+    </main>
+</body>
+</html>

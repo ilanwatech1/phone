@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speckle Poultry Farm - About Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Background Animation */
+        body {
+            background: linear-gradient(120deg, #ff9a9e, #fad0c4, #fbc2eb);
+            background-size: 200% 200%;
+            animation: bgAnimation 10s ease infinite;
+        }
+
+        @keyframes bgAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Card Hover Effect */
+        .hover-3d {
+            perspective: 1000px;
+            transform-style: preserve-3d;
+            transition: transform 0.3s ease;
+        }
+
+        .hover-3d:hover {
+            transform: rotateY(15deg) rotateX(-10deg) scale(1.05);
+        }
+
+        /* Button Hover Animation */
+        .btn-hover::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: scale(0);
+            border-radius: inherit;
+            transition: transform 0.3s ease;
+        }
+
+        .btn-hover:hover::before {
+            transform: scale(1);
+        }
+
+        /* Mouse Trail Effect */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translate(-50%, -50%) scale(1);
+            pointer-events: none;
+            animation: mouseTrail 3s infinite alternate;
+        }
+
+        @keyframes mouseTrail {
+            from { transform: translate(-45%, -45%) scale(0.9); }
+            to { transform: translate(-55%, -55%) scale(1.1); }
+        }
+
+        /* Image Shadow Animation */
+        .img-hover:hover img {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            transition: box-shadow 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-800 text-white font-sans">
+    <!-- Header -->
+    <header class="bg-gray-900 shadow-lg">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-red-500">
+                Speckle Poultry Farm
+            </a>
+            <nav class="space-x-6 text-lg">
+                <a href="index.html" class="hover:text-red-400">Home</a>
+                <a href="about.html" class="hover:text-red-400">About</a>
+                <a href="services.html" class="hover:text-red-400">Services</a>
+                <a href="contact.html" class="hover:text-red-400">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-[60vh] w-full bg-cover bg-center rounded-lg hover-3d" style="background-image: url('https://files.oaiusercontent.com/file-3Cz5EeFGuNTaHwSKghyyfg?se=2024-12-19T07%3A14%3A34Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D4dfc972f-dc45-4851-870e-0e9e5ff881e5.webp&sig=/3SEE15ZkoO8ZlniPNp3Y7dZYXLe/3IWbKidWsLshKo%3D');">
+        <div class="absolute inset-0 bg-black bg-opacity-50 rounded-lg"></div>
+        <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
+            <h1 class="text-5xl font-extrabold mb-4 text-white">About Us</h1>
+            <p class="text-xl text-gray-200 max-w-2xl">
+                At Speckle Poultry Farm, we deliver excellence in poultry farming with a passion for innovation and care.
+            </p>
+        </div>
+    </section>
+
+    <!-- Vision and Mission Section -->
+    <section class="py-16 bg-gray-900 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-6 text-red-500">Our Vision & Mission</h2>
+            <p class="text-lg leading-relaxed text-gray-300">
+                Established in 2001, Speckle Poultry Farm started in Kaduna, expanded to Jos, and now thrives in Abuja. 
+                We aim to revolutionize poultry farming with sustainable practices, ensuring the highest quality and care for our environment and community.
+            </p>
+        </div>
+    </section>
+
+    <!-- Chicken Types Section -->
+    <section class="py-16 bg-gray-800">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-10 text-red-500">Types of Chickens</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Chicken Types -->
+                <div class="flex flex-col items-center img-hover">
+                    <img src="https://i.pinimg.com/236x/4b/de/f4/4bdef4493b969df9c040fc2fdf930dad.jpg" alt="Broiler Chicken" class="w-40 h-40 rounded-full object-cover">
+                    <p class="mt-4 text-lg">Broiler Chicken</p>
+                </div>
+                <div class="flex flex-col items-center img-hover">
+                    <img src="https://i.pinimg.com/474x/3b/b2/89/3bb28956b0a8985354a239a431d07cac.jpg" alt="Layer Chicken" class="w-40 h-40 rounded-full object-cover">
+                    <p class="mt-4 text-lg">Layer Chicken</p>
+                </div>
+                <div class="flex flex-col items-center img-hover">
+                    <img src="https://i.pinimg.com/236x/15/f0/cd/15f0cd1044ec543ae215de8ff95773b2.jpg" alt="Cockerel" class="w-40 h-40 rounded-full object-cover">
+                    <p class="mt-4 text-lg">Cockerel</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-6 bg-gray-900">
+        <div class="text-center text-sm text-gray-500">
+            &copy; 2024 Speckle Poultry Farm. All Rights Reserved.
+        </div>
+    </footer>
+</body>
+</html>
